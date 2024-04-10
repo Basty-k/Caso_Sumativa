@@ -1,0 +1,260 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1, h2, h3 {
+    color: #333; /* Color del texto para títulos */
+}
+
+h1 {
+    margin-top: 20px; /* Añade espacio en la parte superior del título */
+    text-align: center; /* Centra el título horizontalmente */
+}
+
+/* Contenedor de cómics */
+.comics-container {
+    display: flex; /* Utiliza Flexbox */
+    flex-wrap: wrap; /* Permite que los cómics se envuelvan cuando no haya suficiente espacio */
+    justify-content: center; /* Centra los cómics horizontalmente */
+}
+
+/* Estilos para cada cómic */
+.comic {
+    flex: 1; /* Cada cómic ocupa un espacio igual dentro del contenedor */
+    max-width: calc(50% - 20px); /* Establece el ancho máximo de cada cómic al 50% del contenedor menos el espacio entre ellos */
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px; /* Añade espacio entre los cómics */
+    text-align: center; /* Centra el contenido dentro de cada cómic */
+}
+
+/* Estilos para las imágenes de los cómics */
+.comic img {
+    max-width: 100%; /* La imagen se ajustará al ancho del contenedor del cómic */
+    height: auto; /* Mantenemos la relación de aspecto de la imagen */
+    border-radius: 5px 5px 0 0; /* Redondea solo la parte superior de la imagen */
+}
+
+/* Estilos para los botones de compra */
+.comic button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.comic button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para el formulario de compra */
+#formularioCompra {
+    /* Elimina position: fixed y right: 20px */
+    margin: 0 auto; /* Esto centrará horizontalmente el formulario */
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+}
+
+#formularioCompra h2 {
+    margin-top: 0;
+    font-size: 24px;
+    text-align: center;
+}
+
+#formularioCompra label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#formularioCompra input[type="text"],
+#formularioCompra input[type="email"],
+#formularioCompra input[type="tel"] {
+    width: calc(100% - 22px); /* Ajusta el ancho para tener en cuenta el padding */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+#formularioCompra button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: calc(100% - 22px); /* Ajusta el ancho para tener en cuenta el padding */
+}
+
+#formularioCompra button:hover {
+    background-color: #45a049;
+}
+    /* Estilos para el mensaje de agradecimiento */
+#agradecimiento {
+        display: none;
+        background-color: #4caf50;
+        color: #fff;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+#agradecimiento h2 {
+        margin-top: 0;
+        font-size: 24px;
+        text-align: center;
+    }
+
+/* Estilos para el navbar */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 120px; /* Ajusta el tamaño del logo según sea necesario */
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; /* El menú ocupa todo el espacio restante */
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para la página de Contacto */
+.container h1 {
+    text-align: left; /* Alinea el título a la izquierda */
+    margin-top: 40px; /* Añade un poco más de espacio en la parte superior del título */
+}
+
+.container p {
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin: 10px 0; /* Ajusta el margen superior e inferior del texto */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.footer-text {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Estilos para la sección de contacto */
+.contact-image {
+    position: relative;
+    display: inline-block;
+    margin-top: 40px;
+}
+
+.contact-image img {
+    display: block;
+    width: 1000px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.contact-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* Color del texto */
+    width: 80%; /* Ancho del contenedor de texto */
+}
+
+.contact-text h2, .contact-text p {
+    margin: 0;
+}
+/* Estilos para el formulario de contacto */
+.contact-form {
+    position: fixed;
+    top: 50%;
+    right: 80px;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white; /* Color del texto */
+    width: 500px; /* Ancho del formulario */
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo del formulario */
+    border-radius: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    background-color: #ff3333; /* Color del botón */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background-color: #cc0000; /* Color del botón al pasar el ratón */
+}

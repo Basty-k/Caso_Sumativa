@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda - Comics Sharingann</title>
+    <link rel="stylesheet" href="./Css/Style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="Comics_Sharingann.html"> <!-- Enlace que lleva al inicio de la página -->
+                    <img src="./Img/Kakashi logo.jpg" alt="Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="Comics_Sharingann.html">Inicio</a></li>
+                <li><a href="Tienda.html">Tienda</a></li> <!-- Enlace para la tienda -->
+                <li><a href="Politica_de_envio.html">Políticas de Envío</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+                <li><a href="Quienes_somos.html">Quiénes Somos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container comics-container">
+        <!-- Cómics -->
+        <div class="comic">
+            <img src="./Img/batman1.jpg" alt="Cómic 1">
+            <h2>Detective Comics #476 (1978)</h2>
+            <p>Lo realmente perturbador que resulta ver al héroe con la marca identificadora del Joker, a saber, su característica sonrisa.</p>
+            <p>Precio: $10</p>
+            <p>Unidades disponibles: 5</p>
+            <button onclick="comprarComic('Comic 1')">Comprar</button>
+        </div>
+
+        <div class="comic">
+            <img src="./Img/batman2.jpg" alt="Cómic 1">
+            <h2>Batman #404 Año Uno (1987)</h2>
+            <p>Mostrarnos el momento exacto por el cual un jovencísimo Bruce Wayne acabará convirtiéndose en el guardián de Gotham.</p>
+            <p>Precio: $10</p>
+            <p>Unidades disponibles: 5</p>
+            <button onclick="comprarComic('Comic 1')">Comprar</button>
+        </div>
+
+        <div class="comic">
+            <img src="./Img/batman3.jpg" alt="Cómic 1">
+            <h2>Batman #47 (1948)</h2>
+            <p>La importancia de que tras esa portada pudimos ver por primera vez el origen del héroe.</p>
+            <p>Precio: $10</p>
+            <p>Unidades disponibles: 5</p>
+            <button onclick="comprarComic('Comic 1')">Comprar</button>
+        </div>
+
+        <div class="comic">
+            <img src="./Img/batman4.jpg" alt="Cómic 1">
+            <h2>Detective Comics #183 (1966)</h2>
+            <p>La curiosidad de que hagan publicidad directa de la serie de televisión de los 60 que tenía a Adam West como protagonista.</p>
+            <p>Precio: $10</p>
+            <p>Unidades disponibles: 5</p>
+            <button onclick="comprarComic('Comic 1')">Comprar</button>
+        </div>
+
+        <div class="comic">
+            <img src="./Img/batman5.jpg" alt="Cómic 1">
+            <h2>Detective Comics #359 (1966)</h2>
+            <p>La primera vez que Barbara Gordon se enfunda el traje de Batgirl.</p>
+            <p>Precio: $10</p>
+            <p>Unidades disponibles: 5</p>
+            <button onclick="comprarComic('Comic 1')">Comprar</button>
+        </div>
+
+        <div class="comic">
+            <img src="./Img/batman6.jpg" alt="Cómic 1">
+            <h2>Batman: La Broma Asesina (1988)</h2>
+            <p>Ser una historia de Alan Moore que marcará un antes y un después por su controvertido final y por los sucesos que harán que cambie la vida drásticamente de uno de los personajes más cercanos al caballero oscuro.</p>
+            <p>Precio: $10</p>
+            <p>Unidades disponibles: 5</p>
+            <button onclick="comprarComic('Comic 1')">Comprar</button>
+        </div>
+
+        <div class="comic">
+            <img src="./Img/batman7.jpg" alt="Cómic 1">
+            <h2>Batman: El regreso del Caballero Oscuro (1986)</h2>
+            <p>Una de las mayores obras maestras de Frank Miller.</p>
+            <p>Precio: $10</p>
+            <p>Unidades disponibles: 5</p>
+            <button onclick="comprarComic('Comic 1')">Comprar</button>
+        </div>
+        
+        <div class="comic">
+            <img src="./Img/batman8.jpg" alt="Cómic 1">
+            <h2>Batman: A Death in the Family (1988)</h2>
+            <p>El título en castellano “una muerte en la familia” y la portada no puede ser más gráfica por ocurrir la desgraciada muerte de Jason Todd a manos de Joker.</p>
+            <p>Precio: $10</p>
+            <p>Unidades disponibles: 5</p>
+            <button onclick="comprarComic('Comic 1')">Comprar</button>
+        </div>
+
+        <div class="comic">
+            <img src="./Img/batman9.jpg" alt="Cómic 1">
+            <h2>Detective Comics #427 (1993)</h2>
+            <p>¿No lo dice todo la portada? El enfrentamiento con Bane que le pasó factura. Incluso creo que es una portada que trasmite el dolor físico y emocional del personaje.</p>
+            <p>Precio: $10</p>
+            <p>Unidades disponibles: 5</p>
+            <button onclick="comprarComic('Comic 1')">Comprar</button>
+        </div>
+
+            <!-- Formulario de compra -->
+<div id="formularioCompra" style="display: none;">
+    <h2>Formulario de Compra</h2>
+    <form id="formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br>
+
+        <!-- Agregar más campos según sea necesario -->
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" required><br>
+
+        <label for="ciudad">Ciudad:</label>
+        <input type="text" id="ciudad" required><br>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" required><br>
+
+        <button type="submit">Enviar</button>
+        <!-- Botón para volver a la página principal durante la compra -->
+        <button type="button" onclick="volverPaginaPrincipal()">Volver a la página principal</button>
+    </form>
+</div>
+
+    </div>
+
+    <!-- Mensaje de agradecimiento -->
+    <div id="agradecimiento" style="display: none;">
+        <h2>¡Gracias por su compra!</h2>
+        <p>Tu pedido ha sido tomado correctamente, más informacion detallada en el correo dado.</p>
+
+        <button type="button" onclick="volverPaginaPrincipal()">Volver a la página principal</button>
+
+    </div>
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/" target="_blank"><img src="./Img/Logoig.jpg" alt="Instagram"></a>
+                <a href="https://www.facebook.com/" target="_blank"><img src="./Img/Logoface.jpg" alt="Facebook"></a>
+            </div>
+            <p>© 2024 Comics Sharigann | Tienda de comics | Tienda Online de DC Comics | Marvel Comics .</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.carousel').slick({
+                slidesToShow: 4, // Muestra 4 elementos a la vez
+                slidesToScroll: 1, // Avanza de 1 en 1
+                autoplay: true, // Inicia el carrusel automáticamente
+                autoplaySpeed: 2000, // Velocidad de cambio de diapositivas en milisegundos
+                responsive: [
+                    {
+                        breakpoint: 768, // Cambia la configuración en dispositivos con un ancho máximo de 768px
+                        settings: {
+                            slidesToShow: 2,
+                        }
+                    },
+                    {
+                        breakpoint: 480, // Cambia la configuración en dispositivos con un ancho máximo de 480px
+                        settings: {
+                            slidesToShow: 1,
+                        }
+                    }
+                ]
+            });
+        });
+
+        function comprarComic(comic) {
+            // Ocultar los cómics y mostrar el formulario de compra
+            document.querySelectorAll('.comic').forEach(function(element) {
+                element.style.display = 'none';
+            });
+            document.getElementById('formularioCompra').style.display = 'block';
+            
+            // Establecer el nombre del cómic seleccionado en el formulario
+            document.getElementById('nombreComic').value = comic;
+        }
+        function volverPaginaPrincipal() {
+             window.location.href = "http://127.0.0.1:5500/Assets/Comics_Sharingann.html";
+        }
+
+        document.getElementById('formulario').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evitar el envío del formulario
+
+            // Aquí podrías enviar los datos del formulario a un servidor para procesar la compra
+            // En este ejemplo, simplemente mostramos el mensaje de agradecimiento y reiniciamos el formulario
+            document.getElementById('formularioCompra').style.display = 'none';
+            document.getElementById('agradecimiento').style.display = 'block';
+            document.getElementById('formulario').reset();
+        });
+    </script>
+</body>
+</html>

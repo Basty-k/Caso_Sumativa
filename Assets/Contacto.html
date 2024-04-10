@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Comics Sharingann</title>
+    <link rel="stylesheet" href="./Css/Style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="Comics_Sharingann.html"> <!-- Enlace que lleva al inicio de la página -->
+                    <img src="./Img/Kakashi logo.jpg" alt="Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="Comics_Sharingann.html">Inicio</a></li>
+                <li><a href="Tienda.html">Tienda</a></li> <!-- Enlace para la tienda -->
+                <li><a href="Politica_de_envio.html">Políticas de Envío</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+                <li><a href="Quienes_somos.html">Quiénes Somos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sección de contacto -->
+<div class="contact-image">
+    <img src="./Img/dcmarvel.jpg" alt="Imagen de contacto">
+    <div class="contact-text">
+        <h2>Tienes dudas o consultas?</h2>
+        <p>Para un mejor servicio puedes contactarte con nosotros, mediante Whatsapp, teléfono, correo electrónico. Un miembro de nuestro staff se contactará contigo a la brevedad.</p>
+    </div>
+    <div class="contact-form">
+        <h3>Escríbenos</h3>
+        <form id="contactForm" action="#" method="post">
+            <input type="text" name="name" placeholder="Tu nombre (requerido)" required><br>
+            <input type="email" name="email" placeholder="Tu correo electrónico (requerido)" required><br>
+            <input type="text" name="subject" placeholder="Asunto"><br>
+            <textarea name="message" rows="4" placeholder="Tu mensaje"></textarea><br>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(event){
+        event.preventDefault(); // Evitar que el formulario se envíe
+
+        // Mostrar mensaje
+        alert("Nos vamos a poner en contacto contigo pronto.");
+
+        // Puedes agregar aquí el código para enviar los datos del formulario a tu servidor si lo necesitas
+    });
+</script>
+
+
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/" target="_blank"><img src="./Img/Logoig.jpg" alt="Instagram"></a>
+                <a href="https://www.facebook.com/" target="_blank"><img src="./Img/Logoface.jpg" alt="Facebook"></a>
+            </div>
+            <p>© 2024 Comics Sharigann | Tienda de comics | Tienda Online de DC Comics | Marvel Comics .</p>
+        </div>
+    </footer>
+</body>
+</html>
