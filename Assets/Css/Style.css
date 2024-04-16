@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #898888;
 }
 
 h1, h2, h3 {
@@ -22,23 +22,27 @@ h1 {
     justify-content: center; /* Centra los cómics horizontalmente */
 }
 
-/* Estilos para cada cómic */
 .comic {
-    flex: 1; /* Cada cómic ocupa un espacio igual dentro del contenedor */
-    max-width: calc(50% - 20px); /* Establece el ancho máximo de cada cómic al 50% del contenedor menos el espacio entre ellos */
+    width: calc(25% - 20px); /* Establece el ancho de cada cómic al 25% del contenedor menos el espacio entre ellos */
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    margin: 20px; /* Añade espacio entre los cómics */
+    margin: 10px; /* Espacio entre los cómics */
     text-align: center; /* Centra el contenido dentro de cada cómic */
+    float: left; /* Hace que los cómics floten hacia la izquierda */
 }
-
+/* Limpia los flotadores después de los cómics */
+.comics-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
 /* Estilos para las imágenes de los cómics */
 .comic img {
     max-width: 100%; /* La imagen se ajustará al ancho del contenedor del cómic */
     height: auto; /* Mantenemos la relación de aspecto de la imagen */
-    border-radius: 5px 5px 0 0; /* Redondea solo la parte superior de la imagen */
+    border-radius: 5px; /* Redondea los bordes de la imagen */
 }
 
 /* Estilos para los botones de compra */
@@ -102,21 +106,21 @@ h1 {
 #formularioCompra button:hover {
     background-color: #45a049;
 }
-    /* Estilos para el mensaje de agradecimiento */
+/* Estilos para el mensaje de agradecimiento */
 #agradecimiento {
-        display: none;
-        background-color: #4caf50;
-        color: #fff;
-        border-radius: 5px;
-        padding: 20px;
-        margin-bottom: 20px;
-    }
+    display: none;
+    background-color: #4caf50;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
 
 #agradecimiento h2 {
-        margin-top: 0;
-        font-size: 24px;
-        text-align: center;
-    }
+    margin-top: 0;
+    font-size: 24px;
+    text-align: center;
+}
 
 /* Estilos para el navbar */
 .navbar {
@@ -230,7 +234,7 @@ footer {
     color: white; /* Color del texto */
     width: 500px; /* Ancho del formulario */
     padding: 40px;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo del formulario */
+    background-color: rgba(104, 102, 102, 0.7); /* Fondo del formulario */
     border-radius: 5px;
 }
 
@@ -258,3 +262,35 @@ footer {
 .contact-form button:hover {
     background-color: #cc0000; /* Color del botón al pasar el ratón */
 }
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambia la dirección del contenedor a columna en dispositivos móviles */
+        align-items: flex-start; /* Alinea los elementos a la izquierda en dispositivos móviles */
+    }
+
+    .logo {
+        margin-bottom: 20px; /* Agrega espacio entre el logo y los enlaces en dispositivos móviles */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Cambia la dirección de los enlaces a columna en dispositivos móviles */
+        align-items: flex-start; /* Alinea los enlaces a la izquierda en dispositivos móviles */
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Aumenta el espacio entre los enlaces en dispositivos móviles */
+    }
+}
+
+/* Estilos para tabletas */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Aquí puedes agregar estilos específicos para tabletas */
+}
+
+/* Estilos para computadoras */
+@media (min-width: 1025px) {
+    /* Aquí puedes agregar estilos específicos para computadoras */
+}
+

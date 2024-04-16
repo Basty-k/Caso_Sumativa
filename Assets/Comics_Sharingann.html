@@ -19,7 +19,6 @@
             <ul class="nav-links">
                 <li><a href="Comics_Sharingann.html">Inicio</a></li>
                 <li><a href="Tienda.html">Tienda</a></li> <!-- Enlace para la tienda -->
-                <li><a href="Politica_de_envio.html">Políticas de Envío</a></li>
                 <li><a href="Contacto.html">Contacto</a></li>
                 <li><a href="Quienes_somos.html">Quiénes Somos</a></li>
             </ul>
@@ -32,56 +31,22 @@
         <div class="comic">
             <img src="./Img/batman1.jpg" alt="Cómic 1">
             <h2>Detective Comics #476 (1978)</h2>
-            <p>Lo realmente perturbador que resulta ver al héroe con la marca identificadora del Joker, a saber, su característica sonrisa.</p>
         </div>
 
         <div class="comic">
             <img src="./Img/batman2.jpg" alt="Cómic 1">
             <h2>Batman #404 Año Uno (1987)</h2>
-            <p>Mostrarnos el momento exacto por el cual un jovencísimo Bruce Wayne acabará convirtiéndose en el guardián de Gotham.</p>
         </div>
 
         <div class="comic">
-            <img src="./Img/batman3.jpg" alt="Cómic 1">
-            <h2>Batman #47 (1948)</h2>
-            <p>La importancia de que tras esa portada pudimos ver por primera vez el origen del héroe.</p>
+            <img src="./Img/ironman8.jpg" alt="Cómic 18">
+            <h2>Iron Man (2020) #8</h2>
         </div>
 
         <div class="comic">
-            <img src="./Img/batman4.jpg" alt="Cómic 1">
-            <h2>Detective Comics #183 (1966)</h2>
-            <p>La curiosidad de que hagan publicidad directa de la serie de televisión de los 60 que tenía a Adam West como protagonista.</p>
+            <img src="./Img/ironman5.jpg" alt="Cómic 15">
+            <h2>Iron Man (2020) #5</h2>
         </div>
-
-        <div class="comic">
-            <img src="./Img/batman5.jpg" alt="Cómic 1">
-            <h2>Detective Comics #359 (1966)</h2>
-            <p>La primera vez que Barbara Gordon se enfunda el traje de Batgirl.</p>
-        </div>
-
-        <div class="comic">
-            <img src="./Img/batman6.jpg" alt="Cómic 1">
-            <h2>Batman: La Broma Asesina (1988)</h2>
-            <p>Ser una historia de Alan Moore que marcará un antes y un después por su controvertido final y por los sucesos que harán que cambie la vida drásticamente de uno de los personajes más cercanos al caballero oscuro.</p>
-        </div>
-
-        <div class="comic">
-            <img src="./Img/batman7.jpg" alt="Cómic 1">
-            <h2>Batman: El regreso del Caballero Oscuro (1986)</h2>
-            <p>Una de las mayores obras maestras de Frank Miller.</p>
-        </div>
-        
-        <div class="comic">
-            <img src="./Img/batman8.jpg" alt="Cómic 1">
-            <h2>Batman: A Death in the Family (1988)</h2>
-            <p>El título en castellano “una muerte en la familia” y la portada no puede ser más gráfica por ocurrir la desgraciada muerte de Jason Todd a manos de Joker.</p>
-        </div>
-
-        <div class="comic">
-            <img src="./Img/batman9.jpg" alt="Cómic 1">
-            <h2>Detective Comics #427 (1993)</h2>
-            <p>¿No lo dice todo la portada? El enfrentamiento con Bane que le pasó factura. Incluso creo que es una portada que trasmite el dolor físico y emocional del personaje.</p>
-         </div>
     </div>
     
     <footer>
@@ -96,53 +61,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('.carousel').slick({
-                slidesToShow: 4, // Muestra 4 elementos a la vez
-                slidesToScroll: 1, // Avanza de 1 en 1
-                autoplay: true, // Inicia el carrusel automáticamente
-                autoplaySpeed: 2000, // Velocidad de cambio de diapositivas en milisegundos
-                responsive: [
-                    {
-                        breakpoint: 768, // Cambia la configuración en dispositivos con un ancho máximo de 768px
-                        settings: {
-                            slidesToShow: 2,
-                        }
-                    },
-                    {
-                        breakpoint: 480, // Cambia la configuración en dispositivos con un ancho máximo de 480px
-                        settings: {
-                            slidesToShow: 1,
-                        }
-                    }
-                ]
-            });
-        });
-
-        function comprarComic(comic) {
-            // Ocultar los cómics y mostrar el formulario de compra
-            document.querySelectorAll('.comic').forEach(function(element) {
-                element.style.display = 'none';
-            });
-            document.getElementById('formularioCompra').style.display = 'block';
-            
-            // Establecer el nombre del cómic seleccionado en el formulario
-            document.getElementById('nombreComic').value = comic;
-        }
-        function volverPaginaPrincipal() {
-             window.location.href = "http://127.0.0.1:5500/Assets/Comics_Sharingann.html";
-        }
-
-        document.getElementById('formulario').addEventListener('submit', function(event) {
-            event.preventDefault(); // Evitar el envío del formulario
-
-            // Aquí podrías enviar los datos del formulario a un servidor para procesar la compra
-            // En este ejemplo, simplemente mostramos el mensaje de agradecimiento y reiniciamos el formulario
-            document.getElementById('formularioCompra').style.display = 'none';
-            document.getElementById('agradecimiento').style.display = 'block';
-            document.getElementById('formulario').reset();
-        });
-    </script>
+    <script src="./Js/script.js"></script>
 </body>
 </html>
+
